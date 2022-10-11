@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Select from "./Select";
 
-function App() {
+const options = [
+  {
+    label: 'first',
+    value: 1
+  },
+  {
+    label: 'second',
+    value: 2
+  },
+  {
+    label: 'third',
+    value: 3
+  },
+  {
+    label: 'fourth',
+    value: 4
+  },
+  {
+    label: 'fifth',
+    value: 5
+  }
+]
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Select options={options} onChange={(e) => console.log(e)}/>
+    </>
+  )
 }
 
 export default App;
